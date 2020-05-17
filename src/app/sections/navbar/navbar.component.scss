@@ -1,0 +1,24 @@
+.navbar-container {
+  font-family: "Oswald", sans-serif;
+
+  .home-link {
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 80px;
+  }
+
+  .nav-item {
+    font-size: 22px;
+    margin-right: 40px;
+    font-weight: 400;
+  }
+
+  .navbar-toggler > .close {
+    display: inline;
+  }
+  
+  .navbar-toggler.collapsed > .close,
+  .navbar-toggler:not(.collapsed) > .navbar-toggler-icon {
+    display: none;
+  }
+}
