@@ -1,8 +1,24 @@
+@import "src/styles/variables";
+
 /* You can add global styles to this file, and also import other style files */
 body {
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
+  font-family: $content-font;
+  color: $content-color;
 }
 
+.title-highlight {
+  padding: 2px 10px 2px 0;
+  background-color: $highlight-yellow;
+  transform: rotate(-1.0deg);
 
+  p {
+    transform: rotate(1.0deg);
+  }
+}
 
+.content {
+  color: $content-color;
+  font-size: 18px;
+  margin-top: 25px;
+}

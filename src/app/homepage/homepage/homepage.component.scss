@@ -1,0 +1,62 @@
+@import "src/styles/variables";
+
+.page-header {
+  background: url("/assets/yellow.png");
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.hero-row {
+  .hero-image {
+    width: 300px;
+  }
+
+  .title {
+    font-family: $title-font;
+    font-size: 35px;
+    line-height: 35px;
+    margin-top: 50px;
+    color: $title-color;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $min-medium-devices) {
+  .hero-row {
+    .hero-image {
+      width: 400px;
+    }
+
+    .title {
+      font-size: 45px;
+      line-height: 45px;
+      margin-top: 0;
+    }
+  }
+
+  .page-header {
+    height: 500px;
+  }
+}
+
+@media (min-width: $max-medium-devices) {
+  .hero-row {
+    .hero-image {
+      width: 400px;
+    }
+
+    .title {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+
+  .page-header {
+    height: 600px;
+  }
+}

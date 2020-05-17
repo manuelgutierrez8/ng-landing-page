@@ -1,0 +1,18 @@
+/**
+I.Extra small devices: max 600px
+II.Medium devices: min 768px - max 992px
+III.Large devices: min 992px - 1200px
+**/
+$small-devices: 600px;
+$min-medium-devices: 768px;
+$max-medium-devices: 992px;
+$max-large-devices: 1200px;
+
+/*Colors*/
+$content-color: rgba(0, 0, 0, 0.4);
+$title-color: #000000;
+$highlight-yellow: #FFD600;
+
+/*Fonts*/
+$content-font:"Open Sans", sans-serif;
+$title-font:"Oswald", sans-serif;

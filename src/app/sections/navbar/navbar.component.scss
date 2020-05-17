@@ -1,5 +1,7 @@
+@import 'src/styles/variables';
+
 .navbar-container {
-  font-family: "Oswald", sans-serif;
+  font-family: $title-font;
 
   .home-link {
     font-size: 28px;
