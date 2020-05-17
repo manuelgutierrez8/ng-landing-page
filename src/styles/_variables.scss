@@ -1,3 +1,4 @@
+@import 'fonts';
 /**
 I.Extra small devices: max 600px
 II.Medium devices: min 768px - max 992px
@@ -15,4 +16,6 @@ $highlight-yellow: #FFD600;
 
 /*Fonts*/
 $content-font:"Open Sans", sans-serif;
-$title-font:"Oswald", sans-serif;
+//$title-font:"Oswald", sans-serif;
+$title-font:"Druk Text Wide";
+$secondary-font: "Syne";

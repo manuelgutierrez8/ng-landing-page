@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Druk Text Wide";
+  src: url("/assets/fonts/regular/DrukTextWide-Medium.woff2") format("woff2"),
+    url("/assets/fonts/regular/DrukTextWide-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Druk Text Wide";
+  src: url("/assets/fonts/black/DrukTextWide-Heavy.woff2") format("woff2"),
+    url("/assets/fonts/black/DrukTextWide-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Druk Text Wide";
+  src: url("/assets/fonts/bold/DrukTextWide-Bold.woff2") format("woff2"),
+    url("/assets/fonts/bold/DrukTextWide-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url("/assets/fonts/regular/Syne-Regular.woff2") format("woff2"),
+    url("/assets/fonts/regular/Syne-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url("/assets/fonts/bold/Syne-Bold.woff2") format("woff2"),
+    url("/assets/fonts/bold/Syne-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
