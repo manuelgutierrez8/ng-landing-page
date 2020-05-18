@@ -2,38 +2,56 @@
 
 .page-header {
   background: url("/assets/yellow.png");
-  height: 400px;
-  background-size: contain;
+  height: auto;
+  background-size: auto 400px;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 100% 0;
+}
+
+.who-section {
+  .column-bg {
+    background: url("/assets/food-bw.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    margin-bottom: 20px;
+  }
+
+  .content-column{
+    background: url("/assets/vector-yellow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 .hero-row {
   .hero-image {
     width: 300px;
   }
+}
 
-  .title {
-    font-family: $title-font;
-    font-size: 35px;
-    line-height: 35px;
-    margin-top: 50px;
-    color: $title-color;
+.title {
+  font-family: $title-font;
+  font-size: 35px;
+  line-height: 35px;
+  margin-top: 50px;
+  color: $title-color;
 
-    p {
-      margin-bottom: 0;
-    }
-  }
-
-  .subtitle {
-      font-family: $secondary-font;
-      color: $title-color;
-      font-size: 22px;
-      font-weight: bold;
-      line-height: 26px;
+  p {
+    margin-bottom: 0;
   }
 }
 
+.subtitle {
+  font-family: $secondary-font;
+  color: $title-color;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+//min-width: 768
 @media (min-width: $min-medium-devices) {
   .hero-row {
     .hero-image {
@@ -47,11 +65,18 @@
     }
   }
 
+  .who-section {
+    .content-column {
+      padding: 50px;
+    }
+  }
+
   .page-header {
-    height: 500px;
+    background-size: auto 100%;
   }
 }
 
+//min-width: 992px
 @media (min-width: $max-medium-devices) {
   .hero-row {
     .hero-image {
@@ -62,9 +87,5 @@
       font-size: 60px;
       line-height: 60px;
     }
-  }
-
-  .page-header {
-    height: 600px;
   }
 }
