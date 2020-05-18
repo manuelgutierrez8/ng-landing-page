@@ -1,1 +1,47 @@
-<p>locations works!</p>
+<div class="row my-4 py-2 d-flex flex-row locations-container">
+    <div class="col-12 col-sm-6 text-left text-md-center">
+        <h2>Estamos para ti</h2>
+        <div class="row type-selector">
+            <div class="col-6 d-flex flex-row justify-content-center align-items-center"
+                [class.--selected]="selectedTab == 'takeaway'" (click)="selectTab('takeaway')">
+                <img src="/assets/takeaway-icon.png" class="icon black" [class.--selected]="selectedTab == 'takeaway'"
+                    alt="">
+                <span>
+                    Para llevar
+                </span>
+            </div>
+            <div class="col-6 d-flex flex-row justify-content-center align-items-center"
+                [class.--selected]="selectedTab == 'delivery'" (click)="selectTab('delivery')">
+                <img src="/assets/delivery-icon.png" class="icon black" [class.--selected]="selectedTab == 'delivery'"
+                    alt="">
+                <span>
+                    Domicilio
+                </span>
+            </div>
+        </div>
+        <div class="row search-row d-flex flex-row justify-content-center align-items-center">
+            <img src="/assets/search.png" alt="" class="icon">
+            <input type="text" placeholder="Buscar nombre o dirección" [(ngModel)]="searchQuery" (change)="getLocations()">
+        </div>
+        <!-- Location Cards container -->
+        <app-loading [loading]="loading"></app-loading>
+        <app-empty-search *ngIf="locations.length == 0 && !loading"></app-empty-search>
+        <div class="row p-4">            
+            <div *ngFor="let l of locations" class="col-12 location-card mb-2 p-4"
+                [class.--selected]="selectedLocation == l.id" (click)="selectLocation(l)">
+                <p class="title">{{l.name}}</p>
+                <p class="detail">Abierto de {{l.opening_time |  date:'hh:mm a' }} -
+                    {{l.closing_time |  date:'hh:mm a' }}</p>
+                <p class="detail">{{l.address}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 text-center">
+        <!-- Map -->
+        <google-map [center]="center" [zoom]="zoom" [options]="options">
+            <!-- [label]="marker.label" -->
+            <map-marker *ngIf="displayMarker" [position]="marker.position" [title]="marker.title" [options]="marker.options"> 
+            </map-marker>
+        </google-map>
+    </div>
+</div>

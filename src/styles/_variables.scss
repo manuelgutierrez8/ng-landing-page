@@ -10,9 +10,13 @@ $max-medium-devices: 992px;
 $max-large-devices: 1200px;
 
 /*Colors*/
+$black: #000;
+$white: #FFF;
 $content-color: rgba(0, 0, 0, 0.4);
 $title-color: #000000;
 $highlight-yellow: #FFD600;
+$card-selected-bg: #FFF1BF;
+$border-color: rgba(0, 0, 0, 0.4);
 
 /*Fonts*/
 $content-font:"Open Sans", sans-serif;

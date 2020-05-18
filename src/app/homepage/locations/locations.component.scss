@@ -1,0 +1,108 @@
+@import "src/styles/variables";
+
+.locations-container {
+  h2 {
+    color: $title-color;
+    font-family: $title-font;
+    font-size: 35px;
+  }
+
+  .type-selector {
+    div {
+      border: 1px solid $border-color;
+      height: 60px;
+      color: $black;
+      font-family: $secondary-font;
+      font-size: 16px;
+      line-height: 19px;
+
+      &:hover {
+        border: 1px solid $black;
+        cursor: pointer;
+      }
+
+      &.--selected {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+
+  .icon {
+    //icons are png images, downloaded in white color,
+    //to display them black, I must use this function
+    height: 25px;
+    margin-right: 25px;
+    width: 25px;
+
+    &.black {
+      filter: invert(100%);
+    }
+
+    &.--selected {
+      filter: invert(0%);
+    }
+  }
+
+  .search-row {
+    border: 1px solid $border-color;
+    border-top: 0;
+    height: 50px;
+    padding: 10px 20px;
+
+    .icon {
+      margin-right: 10px;
+    }
+
+    input {
+      width: 230px;
+      font-size: 16px;
+      outline: none;
+      border: none;
+    }
+  }
+
+  .location-card {
+    color: $black;
+    text-align: left;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .title {
+      font-family: $secondary-font;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .detail {
+      line-height: 22px;
+    }
+
+    &:hover {
+      border: 1px solid $black;
+      cursor: pointer;
+    }
+
+    &.--selected {
+      background-color: $card-selected-bg;
+      border: none;
+      border-radius: 0;
+      cursor: default;
+    }
+  }
+}
+
+@media (min-width: $min-medium-devices) {
+  .locations-container {
+    .type-selector {
+      div {
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
+  }
+}
