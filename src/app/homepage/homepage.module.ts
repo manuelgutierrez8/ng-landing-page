@@ -10,9 +10,10 @@ import { LocationsComponent } from './locations/locations.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppSectionComponent } from './app-section/app-section.component';
 
 @NgModule({
-  declarations: [HomepageComponent, LocationsComponent, TestimonialsComponent, ContactComponent],
+  declarations: [HomepageComponent, LocationsComponent, TestimonialsComponent, ContactComponent, AppSectionComponent],
   imports: [
     CommonModule,
     GoogleMapsModule,

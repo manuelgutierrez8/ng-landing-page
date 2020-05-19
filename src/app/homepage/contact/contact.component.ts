@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
   }
 
   errorMessage = '';
-  formSubmitted = true;
+  formSubmitted = false;
 
   constructor(private fb: FormBuilder, private contactService: ContactService) {
     this.contact_form = fb.group({
