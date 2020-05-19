@@ -11,6 +11,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppSectionComponent } from './app-section/app-section.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [HomepageComponent, LocationsComponent, TestimonialsComponent, ContactComponent, AppSectionComponent],
@@ -21,7 +22,8 @@ import { AppSectionComponent } from './app-section/app-section.component';
     FormsModule,
     ReactiveFormsModule,
     SectionsModule,
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ]
 })
 export class HomepageModule { }

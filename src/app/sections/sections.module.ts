@@ -5,6 +5,7 @@ import { EmptySearchComponent } from './empty-search/empty-search.component';
 import { LoadingComponent } from './loading/loading.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 import { FooterComponent } from './footer/footer.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,15 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     NavbarComponent,
     EmptySearchComponent,
     LoadingComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    FooterComponent
   ]
 })
 export class SectionsModule { }
