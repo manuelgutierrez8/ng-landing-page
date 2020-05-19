@@ -3,6 +3,19 @@
 .navbar-container {
   font-family: $title-font;
 
+  .navbar-light .navbar-nav .nav-link {
+    color: $black;
+  }
+
+  nav {
+    &.--opened {
+      background-color: $white;
+      border-radius: 0px 0px 30px 30px;
+      box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+      color: $black;
+    }
+  }
+
   .home-link {
     font-size: 28px;
     font-weight: bold;
@@ -13,6 +26,8 @@
     font-size: 18px;
     margin-right: 40px;
     font-weight: 400;
+    font-family: $secondary-font;
+    color: $black !important;
   }
 
   .navbar-toggler > .close {
