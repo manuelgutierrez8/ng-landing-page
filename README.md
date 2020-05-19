@@ -2,7 +2,7 @@
 
 This project is a landing page based on 2 sections, Homepage and Menu
 
-You can check the published version on :
+You can check the published version [Here](https://foodiedemo.z20.web.core.windows.net/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
