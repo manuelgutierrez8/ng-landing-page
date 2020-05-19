@@ -1,1 +1,30 @@
-<p>menu-page works!</p>
+<div class="container-fluid page-header">
+    <div class="row">
+        <div class="container">
+            <!-- Menu -->
+            <div class="row">
+                <div class="col-12">
+                    <app-navbar [dark]="useDarkMenu"></app-navbar>
+                </div>
+            </div>
+            <!-- Hero -->
+            <div class="row my-4 py-2 d-flex flex-column flex-sm-row-reverse hero-row">
+                <div class="col-12 col-sm-6 d-flex justify-content-center align-items-center">
+                    <img src="/assets/menu-hero.png" alt="" class="img-fluid hero-image">
+                </div>
+                <div class="col-12 col-sm-6 d-flex flex-column 
+                    justify-content-center align-items-center align-items-md-start">
+                    <div class="title">
+                        <p>Cada sabor</p>
+                        <p>es una nueva</p>
+                        <div class="title-highlight title-black">
+                            <p>experiencia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-food-list>
+</app-food-list>

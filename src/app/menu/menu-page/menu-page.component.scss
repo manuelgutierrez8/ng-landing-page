@@ -1,0 +1,77 @@
+@import "src/styles/variables";
+
+.page-header {
+  background: url("/assets/menu-page-bg.png");
+  height: auto;
+  background-size: auto 400px;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-color: $black;
+
+  /*.row {
+      background-color: $black;
+  }*/
+}
+
+.hero-row {
+  .hero-image {
+    width: 300px;
+  }
+}
+
+.title {
+  font-family: $title-font;
+  font-size: 35px;
+  line-height: 35px;
+  margin-top: 50px;
+  color: $white;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.title-black {
+    color: $black;
+}
+
+.subtitle {
+  font-family: $secondary-font;
+  color: $title-color;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+//min-width: 768
+@media (min-width: $min-medium-devices) {
+  .hero-row {
+    .hero-image {
+      width: 400px;
+    }
+
+    .title {
+      font-size: 45px;
+      line-height: 45px;
+      margin-top: 0;
+    }
+  }
+
+  .page-header {
+    background-size: auto 100%;
+  }
+}
+
+//min-width: 992px
+@media (min-width: $max-medium-devices) {
+  .hero-row {
+    .hero-image {
+      width: 400px;
+    }
+
+    .title {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+}

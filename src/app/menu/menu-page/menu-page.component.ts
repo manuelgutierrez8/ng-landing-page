@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-page.component.scss']
 })
 export class MenuPageComponent implements OnInit {
-
+  useDarkMenu = true;
   constructor() { }
 
   ngOnInit(): void {

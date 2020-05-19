@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   mobileOpened = false;
+  @Input() dark = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -14,6 +15,11 @@ export class NavbarComponent implements OnInit {
 
   toggleMenuOpened() {
     this.mobileOpened = !this.mobileOpened;
+  }
+
+  redirect(route) {
+    if (!route)
+      return;
   }
 
 }

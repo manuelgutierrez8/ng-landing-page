@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { SectionsModule } from './sections/sections.module';
 import { HomepageModule } from './homepage/homepage.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuModule } from './menu/menu.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     SectionsModule,
     HomepageModule,
-    FormsModule
+    FormsModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

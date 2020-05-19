@@ -1,1 +1,46 @@
-<p>food-list works!</p>
+<div class="container food-list-container">
+    <div class="row py-4">
+        <div class="col-12 text-center d-flex justify-content-center">
+            <div class="search-input">
+                <img src="/assets/search.png" alt="" class="icon">
+                <input type="text" placeholder="Busca tu platillo favorito" [(ngModel)]="searchQuery"
+                    (change)="getMenu()">
+            </div>
+        </div>
+    </div>
+    <div class="row py-4 mb-4" *ngIf="categories.length > 0">
+        <div class="col-12 text-center d-flex justify-content-center flex-column flex-md-row">
+            <span class="cat-link" href="" (click)="selectCategory('')"
+                [class.--selected]="selectedCategory == ''">Todas</span>
+
+            <span *ngFor="let c of categories" class="cat-link" href="" (click)="selectCategory(c.id)"
+                [class.--selected]="selectedCategory == c.id">{{c.name}}</span>
+        </div>
+    </div>
+    <div class="row" *ngIf="!loading && foodList.length > 0">
+        <div class="col-12">
+            <div class="food-list">
+                <div class="food-card" *ngFor="let f of foodList">
+                    <img [src]="f.image" alt="" class="img-fluid">
+                    <div class="card-content">
+                        <p class="title">{{f.name}}</p>
+                        <p class="content">{{ f.description }}</p>
+                        <div class="card-actions">
+                            <span class="category">{{f.category}}</span>
+                            <span class="price">${{f.price}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="!loading && foodList.length > 0">
+        <div class="col-12 text-center d-flex justify-content-center">
+            <span class="page-button" *ngFor="let p of pages" [class.--selected]="selectedPage == p" (click)="selectPage(p)">
+                {{p}}
+            </span>
+        </div>
+    </div>
+    <app-loading [loading]="loading"></app-loading>
+    <app-empty-food-search *ngIf="!loading && foodList.length == 0"></app-empty-food-search>
+</div>
