@@ -38,16 +38,15 @@ export class ContactComponent implements OnInit {
         email: this.contact_form.get('email').value,
         message: this.contact_form.get('message').value,
       }
-      this.formSubmitted = true;
 
-      // this.contactService.postContact(this.contactInfo).subscribe(response => {
-      //   if (response.status == 200) {
-      //     this.formSubmitted = true;
-      //   }
-      //   console.log(response);
-      // }, err => {
-      //   this.errorMessage = err.status + ' - ' + err.message;
-      // });
+      this.contactService.postContact(this.contactInfo).subscribe(response => {
+        if (response.status == 200) {
+          this.formSubmitted = true;
+        }
+        console.log(response);
+      }, err => {
+        this.errorMessage = err.status + ' - ' + err.message;
+      });
     }
   }
 

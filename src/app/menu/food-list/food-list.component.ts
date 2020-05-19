@@ -30,7 +30,7 @@ export class FoodListComponent implements OnInit {
       this.categories = categoriesResponse.body.data;
 
       if (this.categories.length > 0) {
-        this.selectedCategory = this.categories[0].id;
+        //this.selectedCategory = this.categories[0].id;
 
         this.getMenu();
       }
@@ -41,6 +41,8 @@ export class FoodListComponent implements OnInit {
     this.toggleLoading();
     this.foodService.getFood(this.selectedCategory, this.searchQuery, this.selectedPage).subscribe(response => {
       this.foodList = response.body.data;
+
+      this.selectedPage = response.body.meta.current_page;
 
       this.pages = [];
       for (let index = 0; index < response.body.meta.last_page; index++) {
@@ -55,6 +57,7 @@ export class FoodListComponent implements OnInit {
   selectCategory(id) {
     if(this.selectedCategory != id) {
       this.selectedCategory = id;
+      this.selectedPage = 1;
       this.getMenu();
     }
 
@@ -65,6 +68,12 @@ export class FoodListComponent implements OnInit {
       this.selectedPage = index;
       this.getMenu();
     }
+  }
+
+  changeSearchQuery() {
+    this.selectedPage = 1;
+
+    this.getMenu();
   }
 
   toggleLoading() {
