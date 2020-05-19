@@ -1,0 +1,52 @@
+<div class="container-fluid contact-section my-4" [formGroup]="contact_form">
+    <div class="row mb-4" *ngIf="!formSubmitted">
+        <div class="col-12 d-flex justify-content-center flex-column align-items-center">
+            <p class="title text-center">
+                Cuentanos tu experiencia
+            </p>
+            <p class="subtitle text-center">
+                Don't miss out on our great offers & Receive deals from all our top restaurants via e-mail.
+            </p>
+        </div>
+    </div>
+    <div class="row" *ngIf="!formSubmitted">
+        <div class="col-12 col-lg-5 d-lg-flex justify-content-lg-center flex-lg-column">
+            <div class="form-group">
+                <small class="text-danger" *ngIf="contact_form.hasError('required', 'name') && contact_form.touched">El
+                    campo es requerido</small>
+                <input type="text" class="form-control" id="name" placeholder="Joe Doe" autocomplete="nothing"
+                    formControlName="name">
+                <label for="name">Nombre y Apellido</label>
+            </div>
+            <div class="form-group">
+                <small class="text-danger" *ngIf="contact_form.hasError('required', 'email') && contact_form.touched">El
+                    campo es requerido</small>
+                <small class="text-danger" *ngIf="contact_form.hasError('email', 'email')">Formato Incorrecto</small>
+                <input type="email" class="form-control" id="inputEmail" placeholder="jdoe@example.com"
+                    autocomplete="nothing" formControlName="email">
+                <label for="inputEmail">Correo Electrónico</label>
+            </div>
+        </div>
+        <div class="col-12 col-lg-7">
+            <div class="form-group">
+                <small class="text-danger"
+                    *ngIf="contact_form.hasError('required', 'message') && contact_form.touched">El campo es
+                    requerido</small>
+                <textarea name="" id="" cols="30" rows="10" class="form-control" formControlName="message"></textarea>
+                <label for="inputName">Mensaje</label>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="!formSubmitted">
+        <div class="col-12 d-flex justify-content-end">
+            <button type="button" [disabled]="!contact_form.valid" class="btn btn-large submit-button"
+                (click)="submitForm()"><b>Enviar Comentarios</b></button>
+        </div>
+    </div>
+    <div class="row" *ngIf="errorMessage">
+        <div class="col-12 d-flex justify-content-center">
+            <span class="text-danger">{{errorMessage}}</span>
+        </div>
+    </div>
+    <app-thank-you *ngIf="formSubmitted"></app-thank-you>
+</div>

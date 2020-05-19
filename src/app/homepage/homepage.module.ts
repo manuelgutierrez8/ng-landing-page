@@ -8,14 +8,17 @@ import { SectionsModule } from '../sections/sections.module';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LocationsComponent } from './locations/locations.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [HomepageComponent, LocationsComponent, TestimonialsComponent],
+  declarations: [HomepageComponent, LocationsComponent, TestimonialsComponent, ContactComponent],
   imports: [
     CommonModule,
     GoogleMapsModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     SectionsModule,
     BrowserModule
   ]

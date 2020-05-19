@@ -1,0 +1,102 @@
+@import "src/styles/variables";
+
+.contact-section {
+  background-color: $black;
+  padding: 100px 15px;
+
+  p {
+    color: $white;
+  }
+
+  .title {
+    font-family: $title-font;
+    font-size: 30px;
+    max-width: 80%;
+  }
+
+  .submit-button {
+    position: relative;
+    color: $black;
+    outline: 0;
+    background: $highlight-yellow;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.08s ease-in;
+    -o-transition: 0.08s ease-in;
+    -ms-transition: 0.08s ease-in;
+    -moz-transition: 0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: darken($highlight-yellow, 10%);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 100%;
+      z-index: -1;
+      -webkit-transition: top 0.09s ease-in;
+    }
+
+    &:hover:before {
+      top: 0;
+    }
+  }
+
+  .subtitle {
+    font-size: 18px;
+    max-width: 80%;
+  }
+
+  /*Form Controls*/
+  .form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .form-control {
+      width: 100%;
+      background-color: $black;
+      border: 1px solid $white;
+      outline: none;
+    }
+
+    input,
+    textarea {
+        color: $highlight-yellow;
+
+      + label {
+        color: $white;
+      }
+
+      &:focus {
+        color: $highlight-yellow;
+        border-color: $highlight-yellow;
+
+        + label {
+          color: $highlight-yellow;
+        }
+      }
+    }
+
+    textarea {
+      max-height: 130px;
+      resize: none;
+    }
+  }
+}
+
+@media (min-height: $min-medium-devices) {
+  .contact-section {
+    padding: 100px 50px;
+
+    .title {
+      font-size: 36px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+    }
+  }
+}
