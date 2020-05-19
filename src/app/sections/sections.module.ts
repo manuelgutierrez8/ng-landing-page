@@ -8,7 +8,7 @@ import { LoadingComponent } from './loading/loading.component';
   declarations: [
     NavbarComponent,
     EmptySearchComponent,
-    LoadingComponent
+    LoadingComponent,
   ],
   imports: [
     CommonModule

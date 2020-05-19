@@ -1,5 +1,5 @@
 <div class="row my-4 py-2 d-flex flex-row locations-container">
-    <div class="col-12 col-sm-6 text-left text-md-center">
+    <div class="col-12 col-lg-6 text-left text-md-center">
         <h2>Estamos para ti</h2>
         <div class="row type-selector">
             <div class="col-6 d-flex flex-row justify-content-center align-items-center"
@@ -36,12 +36,13 @@
             </div>
         </div>
     </div>
-    <div class="col-12 col-sm-6 text-center">
+    <div class="col-12 col-lg-6 text-center">
         <!-- Map -->
-        <google-map [center]="center" [zoom]="zoom" [options]="options">
-            <!-- [label]="marker.label" -->
-            <map-marker *ngIf="displayMarker" [position]="marker.position" [title]="marker.title" [options]="marker.options"> 
-            </map-marker>
-        </google-map>
+        <div class="d-none d-md-flex justify-content-md-center">
+            <google-map [center]="center" [zoom]="zoom" [options]="options" class="map">
+                <map-marker *ngIf="displayMarker" [position]="marker.position" [title]="marker.title" [options]="marker.options"> 
+                </map-marker>
+            </google-map>
+        </div>
     </div>
 </div>

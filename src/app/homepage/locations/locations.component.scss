@@ -6,7 +6,7 @@
     font-family: $title-font;
     font-size: 35px;
   }
-
+  
   .type-selector {
     div {
       border: 1px solid $border-color;
@@ -95,6 +95,7 @@
     }
   }
 }
+
 
 @media (min-width: $min-medium-devices) {
   .locations-container {

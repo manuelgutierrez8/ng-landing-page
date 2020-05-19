@@ -1,0 +1,36 @@
+<div class="container-fluid p-4 testimonial-section d-flex flex-column justify-content-center">
+    <img src="/assets/ketchup-left.png" alt="" class="bg-left d-none d-md-block">
+    <img src="/assets/ketchup-right.png" alt="" class="bg-right d-none d-md-block">
+    <img src="/assets/ketchup.png" alt="" class="bg-right-secondary d-none d-lg-block">
+    <div class="row mt-2">
+        <div class="col-12">
+            <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+                <div class="carousel-inner d-flex align-items-center">
+                    <div class="carousel-item" [class.active]="t.value == currentSlide" *ngFor="let t of testimonials">
+                        <div class="testimonial">
+                            <p class="title">“{{ t.title }}”</p>
+                            <p class="detail">{{ t.comment }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-12 text-center d-flex justify-content-center">
+            <div class="navigation-controls d-flex justify-content-around">
+                <!-- data-slide="prev" -->
+                <a class="navigation" href="#carouselExampleControls" role="button" data-slide="prev"
+                    [class.clickable]="currentIndex != 1">
+                    <img src="/assets/previous.png" alt="" class="img-fluid" (click)="previous()">
+                </a>
+                {{ currentIndex + ' / ' + totalItems }}
+                <a class="navigation" href="#carouselExampleControls" role="button" data-slide="next"
+                    [class.clickable]="currentIndex <= (totalItems-1)">
+                    <img src="/assets/next.png" alt="" class="img-fluid" (click)="next()">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

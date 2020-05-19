@@ -19,7 +19,7 @@ export class LocationsComponent implements OnInit {
   options: google.maps.MapOptions = {
     mapTypeId: 'roadmap',
     zoomControl: true,
-    scrollwheel: true,
+    scrollwheel: false,
     disableDoubleClickZoom: true,
     maxZoom: 15,
     minZoom: 8,
